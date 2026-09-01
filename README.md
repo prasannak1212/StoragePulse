@@ -4,6 +4,35 @@ Linux Storage & Filesystem Monitoring Dashboard
 
 ## Overview
 
+StoragePulse is a Linux storage and filesystem monitoring dashboard built using Bash, Python, FastAPI and Streamlit.
+
+The goal is to monitor and analyze:
+
+- Disks
+- Partitions
+- Filesystems
+- Filesystem utilization
+- Disk I/O
+- Storage growth
+- Storage-related alerts
+
+## Project Structure
+
+storagepulse/
+├── collectors/
+│   ├── disks.sh
+│   ├── filesystems.sh
+│   └── io.sh
+│
+├── app/
+│   ├── main.py
+│   └── analyzer.py
+│
+├── data/
+├── logs/
+├── scripts/
+└── README.md
+
 ## Architecture
 
 ## Features
@@ -21,8 +50,7 @@ Linux Storage & Filesystem Monitoring Dashboard
 - Python
 - FastAPI
 - Streamlit
-
-## Project Structure
+- Git/GitHub
 
 ## How It Works
 
@@ -35,3 +63,11 @@ Linux Storage & Filesystem Monitoring Dashboard
 ## What I Learned
 
 ## Future Improvements
+
+## SUMMARY
+Phase 1 — Disk Inventory
+ Create project structure
+ Configure Git and GitHub
+ Configure SSH authentication
+ Explore Linux block devices
+ Create initial disk collector
