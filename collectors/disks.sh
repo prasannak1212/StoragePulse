@@ -1,11 +1,20 @@
 #!/bin/bash
 
-echo "======================================"
-echo "        StoragePulse - Disks"
-echo "======================================"
+# Find the project directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
-echo ""
-echo "DISKS AND PARTITIONS"
-echo "--------------------"
+# Output location
+OUTPUT_DIR="$PROJECT_DIR/data"
+OUTPUT_FILE="$OUTPUT_DIR/disks.json"
 
-lsblk -o NAME,PATH,SIZE,TYPE,FSTYPE,MOUNTPOINTS
+# Create data directory if required
+mkdir -p "$OUTPUT_DIR"
+
+# Collect disk information
+lsblk -J \
+    -o NAME,PATH,SIZE,TYPE,FSTYPE,MOUNTPOINTS \
+    > "$OUTPUT_FILE"
+
+echo "Disk inventory collected successfully."
+echo "Output: $OUTPUT_FILE"

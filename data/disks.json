@@ -1,0 +1,41 @@
+{
+   "blockdevices": [
+      {
+         "name": "sda",
+         "path": "/dev/sda",
+         "size": "388.6M",
+         "type": "disk",
+         "fstype": "ext4",
+         "mountpoints": [
+             null
+         ]
+      },{
+         "name": "sdb",
+         "path": "/dev/sdb",
+         "size": "186M",
+         "type": "disk",
+         "fstype": "ext4",
+         "mountpoints": [
+             null
+         ]
+      },{
+         "name": "sdc",
+         "path": "/dev/sdc",
+         "size": "2G",
+         "type": "disk",
+         "fstype": "swap",
+         "mountpoints": [
+             "[SWAP]"
+         ]
+      },{
+         "name": "sdd",
+         "path": "/dev/sdd",
+         "size": "1T",
+         "type": "disk",
+         "fstype": "ext4",
+         "mountpoints": [
+             "/mnt/wslg/distro", "/"
+         ]
+      }
+   ]
+}

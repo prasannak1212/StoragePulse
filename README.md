@@ -35,6 +35,32 @@ storagepulse/
 
 ## Architecture
 
+1. Disk Inventory:
+┌──────────────────┐
+│      Linux       │
+└────────┬─────────┘
+         │
+         │ lsblk
+         ▼
+┌──────────────────┐
+│      Bash        │
+│  disks.sh        │
+└────────┬─────────┘
+         │
+         │ JSON
+         ▼
+┌──────────────────┐
+│     FastAPI      │
+│     /disks       │
+└────────┬─────────┘
+         │
+         │ HTTP
+         ▼
+┌──────────────────┐
+│    Streamlit     │
+│    Dashboard     │
+└──────────────────┘
+
 ## Features
 
 ### Disk Monitoring
@@ -65,7 +91,7 @@ storagepulse/
 ## Future Improvements
 
 ## SUMMARY
-Phase 1 — Disk Inventory
+Phase 1 - Disk Inventory
  Create project structure
  Configure Git and GitHub
  Configure SSH authentication
