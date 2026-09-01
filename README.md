@@ -44,7 +44,7 @@ storagepulse/
 
 ## Phases
 
-### 1. Disk Inventory:
+### Phase - 1. Disk Inventory:
 
 ## Architecture
 ┌──────────────────┐
