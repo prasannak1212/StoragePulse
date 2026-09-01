@@ -33,17 +33,28 @@ storagepulse/
 ├── scripts/
 └── README.md
 
-## Architecture
+## Technologies
 
-1. Disk Inventory:
+- Linux
+- Bash
+- Python
+- FastAPI
+- Streamlit
+- Git/GitHub
+
+## Phases
+
+### 1. Disk Inventory:
+
+## Architecture
 ┌──────────────────┐
 │      Linux       │
 └────────┬─────────┘
          │
-         │ lsblk
+         │ Bash Commands (lsblk)
          ▼
 ┌──────────────────┐
-│      Bash        │
+│   Bash Script    │
 │  disks.sh        │
 └────────┬─────────┘
          │
@@ -61,7 +72,12 @@ storagepulse/
 │    Dashboard     │
 └──────────────────┘
 
-## Features
+## Workflow
+
+Step - 1: Choose appropriate bash command to get JSON output for all disks.
+Step - 2: Write Bash Script disks.sh (storagepulse/collectors/disks.sh) to save the JSON file in disks.json (storagepulse/collectors/disks.json).
+Step - 3: Create FastAPI GET API Endpoint "/disks" to expose the API.
+Step - 4: Call the Endpoint from streamlit and display as dashboard.
 
 ### Disk Monitoring
 
@@ -69,31 +85,7 @@ storagepulse/
 
 ### I/O Monitoring
 
-## Technologies
 
-- Linux
-- Bash
-- Python
-- FastAPI
-- Streamlit
-- Git/GitHub
 
-## How It Works
 
-## Installation
 
-## Usage
-
-## Screenshots
-
-## What I Learned
-
-## Future Improvements
-
-## SUMMARY
-Phase 1 - Disk Inventory
- Create project structure
- Configure Git and GitHub
- Configure SSH authentication
- Explore Linux block devices
- Create initial disk collector
